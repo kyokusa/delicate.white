@@ -107,7 +107,7 @@ label {
   label:disabled {
     color: #787878; }
     label:disabled:backdrop {
-      color: #00b0ff; }
+      color: #787878; }
   label:backdrop {
     color: #787878; }
 
@@ -2932,7 +2932,7 @@ progressbar trough, scale trough, scale fill {
 
 progressbar progress, scale highlight {
   border: none;
-  background-color: alpha(#00b0ff, 0.20);
+  background-color: #00b0ff;
   border-radius: 3px;
   margin: 0; }
   progressbar progress:disabled, scale highlight:disabled {
@@ -2940,7 +2940,7 @@ progressbar progress, scale highlight {
     background-color: rgba(100, 100, 100, 0.14); }
   progressbar progress:backdrop, progressbar:backdrop progress, scale highlight:backdrop, progressbar progress:active:backdrop, progressbar:backdrop progress:active, scale highlight:active:backdrop {
     border-color: #3ec3ff;
-    background-color: #3ec3ff; }
+    background-color: alpha(#00b0ff, 0.20); }
     progressbar progress:backdrop:disabled, progressbar:backdrop progress:disabled, scale highlight:backdrop:disabled, progressbar progress:active:backdrop:disabled, progressbar:backdrop progress:active:disabled, scale highlight:active:backdrop:disabled {
       background-color: rgba(100, 100, 100, 0.1); }
 
