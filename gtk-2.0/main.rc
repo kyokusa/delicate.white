@@ -1496,6 +1496,7 @@ style "menubar" {
   bg[NORMAL]      = @dark_bg_color
   text[NORMAL]    = @dark_fg_color
   fg[NORMAL]      = @dark_fg_color
+  fg[PRELIGHT]    = @dark_fg_color
   bg[SELECTED]    = @dark_bg_color
   fg[SELECTED]    = shade(0.9, @dark_fg_color)
 
