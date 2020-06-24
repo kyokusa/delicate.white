@@ -186,6 +186,7 @@ StEntry StLabel.hint-text {
 
 /*slider*/
 .slider{
+<<<<<<< HEAD
   color: rgba(0, 176, 255, 0.95);  
   height: 1em;  
   -barlevel-height: 2px;
@@ -206,6 +207,25 @@ StEntry StLabel.hint-text {
   -slider-handle-radius: 6px;
   -slider-handle-border-width: 0;
   -slider-handle-border-color: #787878;
+=======
+	height: 1em;
+  -barlevel-height: 0.3em;
+  -barlevel-background-color: rgba(255, 255, 255, 0.20);
+  -barlevel-border-width: 1px;
+  -barlevel-border-color: rgba(100, 100, 100, 0.40);
+
+  -barlevel-active-background-color: #00b0ff;
+  -barlevel-active-border-color: #00b0ff;
+
+  -barlevel-overdrive-color: #ff6e03;
+  -barlevel-overdrive-border-color: #ff6e03;
+  -barlevel-overdrive-separator-width: 1px;
+
+  -slider-handle-radius: 6px;
+	-slider-handle-border-width: 1px;
+  -slider-handle-border-color: rgba(41, 123, 255, 0.40);
+	color: rgba(100, 100, 100, 1);
+>>>>>>> 4f22fbb6acf9fb6b8d8f65fd87c829194ca4583e
 }
 .slider:hover{
   color: #00b0ff; 
@@ -1069,6 +1089,7 @@ background-color: rgba(255, 255, 255, 0.80);
 .modal-dialog .run-dialog-error-box {
   padding-top: 16px;
   spacing: 6px;
+<<<<<<< HEAD
 }
 .modal-dialog .run-dialog-button-box {
   margin: 3px;
@@ -1135,6 +1156,74 @@ background-color: rgba(255, 255, 255, 0.80);
   border-right-width: 0px;
   border-radius: 0px 6px 6px 0;
 }
+=======
+}
+.modal-dialog .run-dialog-button-box {
+  margin: 3px;
+  padding-top: 1em;
+}
+.modal-dialog .run-dialog-label {
+  font-size: 1em;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.38);
+  padding-bottom: .4em;
+}
+.modal-dialog-linked-button {
+  min-height: 40px;
+  padding: 0 16px;
+  border: none;
+  margin-bottom: 6px;
+  font-size: 10.5pt;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.62);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+  box-shadow: none;
+  text-shadow: none;
+  icon-shadow: none;
+}
+.modal-dialog-linked-button:hover {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.15);
+  border-color: transparent;
+  box-shadow: none;
+  text-shadow: none;
+  icon-shadow: none;
+}
+.modal-dialog-linked-button:active {
+  color: white;
+  background-color: #00b0ff;
+  border-color: transparent;
+  box-shadow: none;
+  text-shadow: none;
+  icon-shadow: none;
+}
+.modal-dialog-linked-button:insensitive {
+  color: rgba(0, 0, 0, 0.26);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+  box-shadow: none;
+  text-shadow: none;
+  icon-shadow: none;
+}
+.modal-dialog-linked-button:focus {
+  color: #00b0ff;
+  text-shadow: none;
+  icon-shadow: none;
+}
+.modal-dialog-linked-button:focus:active {
+  color: white;
+}
+.modal-dialog-linked-button:first-child {
+  margin-left: 6px;
+  border-radius: 8px 0px 0px 6px;
+}
+.modal-dialog-linked-button:last-child {
+  margin-right: 6px;
+  border-right-width: 0px;
+  border-radius: 0px 6px 6px 0;
+}
+>>>>>>> 4f22fbb6acf9fb6b8d8f65fd87c829194ca4583e
 .modal-dialog-linked-button:first-child:last-child {
   margin: 0 6px 6px 6px;
   border-right-width: 0px;
@@ -1292,9 +1381,15 @@ background-color: rgba(255, 255, 255, 0.80);
   height: 0.4em;
   -barlevel-height: 0.5em;
   -barlevel-background-color: white;
+<<<<<<< HEAD
   -barlevel-border-width: 0;
   -barlevel-border-color: rgba(100, 100, 100, 0.5);
   -barlevel-active-background-color: 00b0ff;
+=======
+  -barlevel-border-width: 1px;
+  -barlevel-border-color: rgba(100, 100, 100, 0.5);
+  -barlevel-active-background-color: #00b0ff;
+>>>>>>> 4f22fbb6acf9fb6b8d8f65fd87c829194ca4583e
   -barlevel-active-border-color: #00b0ff;
   -barlevel-overdrive-color: #ff6e03;
   -barlevel-overdrive-border-color: #ff6e03;
