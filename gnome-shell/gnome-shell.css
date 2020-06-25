@@ -186,7 +186,6 @@ StEntry StLabel.hint-text {
 
 /*slider*/
 .slider{
-<<<<<<< HEAD
   color: rgba(0, 176, 255, 0.95);  
   height: 1em;  
   -barlevel-height: 2px;
@@ -207,25 +206,6 @@ StEntry StLabel.hint-text {
   -slider-handle-radius: 6px;
   -slider-handle-border-width: 0;
   -slider-handle-border-color: #787878;
-=======
-	height: 1em;
-  -barlevel-height: 0.3em;
-  -barlevel-background-color: rgba(255, 255, 255, 0.20);
-  -barlevel-border-width: 1px;
-  -barlevel-border-color: rgba(100, 100, 100, 0.40);
-
-  -barlevel-active-background-color: #00b0ff;
-  -barlevel-active-border-color: #00b0ff;
-
-  -barlevel-overdrive-color: #ff6e03;
-  -barlevel-overdrive-border-color: #ff6e03;
-  -barlevel-overdrive-separator-width: 1px;
-
-  -slider-handle-radius: 6px;
-	-slider-handle-border-width: 1px;
-  -slider-handle-border-color: rgba(41, 123, 255, 0.40);
-	color: rgba(100, 100, 100, 1);
->>>>>>> 4f22fbb6acf9fb6b8d8f65fd87c829194ca4583e
 }
 .slider:hover{
   color: #00b0ff; 
@@ -258,17 +238,17 @@ StEntry StLabel.hint-text {
 .message{ 
   background-color: transparent;  
   border-radius: 8px;
-  border: 1px rgba(0, 0, 0, 0.1);
+  border: 1px rgba(0, 0, 0, 0.05);
   text-shadow: none; 
   box-shadow: none;
 }
 .message:focus,
 .message:hover{
-  border: 1px rgba(100, 100, 100, 0.5);  
-  box-shadow: 0 0 2px 0 rgba(100, 100, 100, 0.5);
+  border: 1px rgba(100, 100, 100, 0.09);  
+  box-shadow: 0 0 2px 0 rgba(100, 100, 100, 0.50);
 }
 .message:active{
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(100, 100, 100, 0.05);
 }
 .message .message-icon-bin {
   padding: 10px 0 10px 12px; 
@@ -370,7 +350,7 @@ StScrollBar StBin#trough{
 }
 StScrollBar StButton#vhandle, 
 StScrollBar StButton#hhandle{
-  border-radius: 3px;
+  border-radius: 8px;
   background-color: #646464;
   margin: 3px; 
 }
@@ -562,8 +542,8 @@ StScrollBar StButton#hhandle:active{
 }
 .osd-window .level {
   height: 4px;
-  border-radius: 2px;
-  background-color: rgba(100, 100, 100, 0.3);
+  border-radius: 8px;
+  background-color: rgba(0, 176, 255, 0.45);
   color: #646464;
   -barlevel-height: 4px;
   -barlevel-background-color: transparent;
@@ -574,7 +554,7 @@ StScrollBar StButton#hhandle:active{
 }
 .osd-window .level-bar {
   background-color: #00b0ff;
-  border-radius: 2px;
+  border-radius: 8px;
 }
 
 /* top panel */
@@ -929,7 +909,7 @@ StScrollBar StButton#hhandle:active{
 
 /*ibus-popup*/
 .candidate-popup-boxpointer {
- -arrow-border-radius: 3px;
+ -arrow-border-radius: 8px;
   -arrow-background-color: white;
   -arrow-border-width: 1px;
   -arrow-border-color: rgba(0, 0, 0, 0.2);
@@ -947,7 +927,7 @@ StScrollBar StButton#hhandle:active{
 
 .candidate-box {
   padding: 0.3em 0.5em 0.3em 0.5em;
-  border-radius: 5px; }
+  border-radius: 8px; }
   .candidate-box:selected, 
 	.candidate-box:hover {
     background-color: #0062ff;
@@ -964,54 +944,73 @@ StScrollBar StButton#hhandle:active{
   padding: 4px; }
 
 .candidate-page-button-previous {
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 8px 0px 0px 8px;
   border-right-width: 0; }
 
 .candidate-page-button-next {
-  border-radius: 0px 5px 5px 0px; }
+  border-radius: 0px 8px 8px 0px; }
 
 .candidate-page-button-icon {
   icon-size: 1em; 
 }
 
 /*notifications*/
-.notification-banner{
-  font-size: 8pt;  
-  min-height: 64px;
+.notification-banner {
+  font-size: 1em;
   width: 34em;
+  min-height: 64px;
+  margin: 5px;
   border-radius: 8px;
-  color: rgba(100, 100, 100, 1);
-  background-color: rgba(255, 255, 255, 0.80);
-  border: 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);  
+  color: rgba(0, 0, 0, 0.80);
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none; 
 }
-.notification-banner:hover{
-  background-color: rgba(255, 255, 255, 0.80);
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5); 
+.notification-banner:hover { 
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;  
 }
-.notification-banner:active{
-  background-color: rgba(255, 255, 255, 0.80);
+.notification-banner:focus { 
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;  
 }
-.notification-banner:focus{
-background-color: rgba(255, 255, 255, 0.80);
+.notification-banner .notification-icon {
+  padding: 5px;
 }
-.notification-banner.notification-actions{
-  spacing: 0; 
- }
-.notification-banner .notification-button{
-  border-radius: 0 0 8px 8px;	
-  background-color: rgba(255, 255, 255, 0.30);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.0);
-  border: 1px rgba(0, 0, 0, 0.2);
-  font-size: 9pt;	
-  color: rgba(100, 100, 100, 1);
+.notification-banner .notification-content {
+  padding: 5px;
+  spacing: 5px;
 }
-.notification-banner .notification-button:hover{
-  background-color: rgba(120, 120, 120, 0.10); 
-  color: rgba(0, 176, 255, 1);  
+.notification-banner .secondary-icon {
+  icon-size: 1.1428571429em;
 }
-.notification-banner .notification-button:active{
-  background-color: rgba(255, 255, 255, 0.80);
+.notification-banner .notification-actions {  
+  padding-top: 0;
+  
+  spacing: 1px;
+}
+.notification-banner .notification-button {
+  min-height: 35px;
+  padding: 0 16px;
+  background-color: transparent;
+  box-shadow: 1px 1px rgba(255, 255, 255, 0.01);
+  border: 1px rgba(0, 0, 0, 0.05);  
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 500;
+}
+.notification-banner .notification-button:first-child {
+  border-radius: 0 0 0 2px;
+}
+.notification-banner .notification-button:last-child {
+  border-radius: 0 0 2px 0;
+}
+.notification-banner .notification-button:hover, .notification-banner .notification-buttonfocus {
+  background-color: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 0 0 8px 8px; 
+}
+.notification-banner .notification-button:active {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.87);
 }
  .summary-source-counter {
   font-size: 10pt;
@@ -1022,40 +1021,43 @@ background-color: rgba(255, 255, 255, 0.80);
   -shell-counter-overlap-y: 3px;
   background-color: #0062ff;
   color: #fff;
-  border: 2px solid #eeeeec;
+  border: 2px solid #d5d5d5;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   border-radius: 0.9em; 
- }
+}
  .chat-body {
-  spacing: 5px; }
-
+  spacing: 5px;
+}
 .chat-response {
-  margin: 5px; }
-
+  margin: 5px; 
+}
 .chat-log-message {
-  color: #787878; }
-
+  color: #787878; 
+}
 .chat-new-group {
-  padding-top: 1em; }
-
+  padding-top: 1em; 
+}
 .chat-received {
-  padding-left: 4px; }
-  .chat-received:rtl {
-    padding-left: 0px;
-    padding-right: 4px; }
+  padding-left: 4px;
+}
+.chat-received:rtl {
+  padding-left: 0px;
+  padding-right: 4px; }
 
 .chat-sent {
   padding-left: 18pt;
-  color: white; }
-  .chat-sent:rtl {
-    padding-left: 0;
-    padding-right: 18pt; }
-
+  color: white;
+}
+.chat-sent:rtl {
+  padding-left: 0;
+  padding-right: 18pt;
+}
 .chat-meta-message {
   padding-left: 4px;
   font-size: 9pt;
   font-weight: bold;
-  color: white; }
+  color: white; 
+}
 .chat-meta-message:rtl {
   padding-left: 0;
   padding-right: 4px; 
@@ -1089,7 +1091,6 @@ background-color: rgba(255, 255, 255, 0.80);
 .modal-dialog .run-dialog-error-box {
   padding-top: 16px;
   spacing: 6px;
-<<<<<<< HEAD
 }
 .modal-dialog .run-dialog-button-box {
   margin: 3px;
@@ -1156,74 +1157,6 @@ background-color: rgba(255, 255, 255, 0.80);
   border-right-width: 0px;
   border-radius: 0px 6px 6px 0;
 }
-=======
-}
-.modal-dialog .run-dialog-button-box {
-  margin: 3px;
-  padding-top: 1em;
-}
-.modal-dialog .run-dialog-label {
-  font-size: 1em;
-  font-weight: normal;
-  color: rgba(0, 0, 0, 0.38);
-  padding-bottom: .4em;
-}
-.modal-dialog-linked-button {
-  min-height: 40px;
-  padding: 0 16px;
-  border: none;
-  margin-bottom: 6px;
-  font-size: 10.5pt;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.62);
-  background-color: rgba(0, 0, 0, 0.1);
-  border-color: transparent;
-  box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
-}
-.modal-dialog-linked-button:hover {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: rgba(0, 0, 0, 0.15);
-  border-color: transparent;
-  box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
-}
-.modal-dialog-linked-button:active {
-  color: white;
-  background-color: #00b0ff;
-  border-color: transparent;
-  box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
-}
-.modal-dialog-linked-button:insensitive {
-  color: rgba(0, 0, 0, 0.26);
-  background-color: rgba(0, 0, 0, 0.1);
-  border-color: transparent;
-  box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
-}
-.modal-dialog-linked-button:focus {
-  color: #00b0ff;
-  text-shadow: none;
-  icon-shadow: none;
-}
-.modal-dialog-linked-button:focus:active {
-  color: white;
-}
-.modal-dialog-linked-button:first-child {
-  margin-left: 6px;
-  border-radius: 8px 0px 0px 6px;
-}
-.modal-dialog-linked-button:last-child {
-  margin-right: 6px;
-  border-right-width: 0px;
-  border-radius: 0px 6px 6px 0;
-}
->>>>>>> 4f22fbb6acf9fb6b8d8f65fd87c829194ca4583e
 .modal-dialog-linked-button:first-child:last-child {
   margin: 0 6px 6px 6px;
   border-right-width: 0px;
@@ -1367,9 +1300,9 @@ background-color: rgba(255, 255, 255, 0.80);
   min-width: 64px;
   min-height: 64px; 
   background-color: rgba(255, 255, 255, 0.80);
-  border: 1px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  border: 1px rgba(100, 100, 100, 0.10);
+  border-radius: 8px;
+  box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.30);
 }
 .osd-window StIcon {
   color: rgba(100, 100, 100, 1);
@@ -1381,15 +1314,9 @@ background-color: rgba(255, 255, 255, 0.80);
   height: 0.4em;
   -barlevel-height: 0.5em;
   -barlevel-background-color: white;
-<<<<<<< HEAD
   -barlevel-border-width: 0;
   -barlevel-border-color: rgba(100, 100, 100, 0.5);
   -barlevel-active-background-color: 00b0ff;
-=======
-  -barlevel-border-width: 1px;
-  -barlevel-border-color: rgba(100, 100, 100, 0.5);
-  -barlevel-active-background-color: #00b0ff;
->>>>>>> 4f22fbb6acf9fb6b8d8f65fd87c829194ca4583e
   -barlevel-active-border-color: #00b0ff;
   -barlevel-overdrive-color: #ff6e03;
   -barlevel-overdrive-border-color: #ff6e03;
@@ -1408,7 +1335,7 @@ background-color: rgba(255, 255, 255, 0.80);
 .resize-popup{
   background-color: white;
   border: 1px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  border-radius: 8px;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -1447,7 +1374,7 @@ background-color: rgba(255, 255, 255, 0.80);
 }
 .nm-dialog-scroll-view {
   border: 1px rgba(100, 100, 100, 1);
-  border-radius: 3px;
+  border-radius: 8px;
   box-shadow: 0 0 2px 0 rgba(100, 100, 100, 1);
   background: rgba(255, 255, 255, 1);
 }
@@ -1483,12 +1410,12 @@ background-color: rgba(255, 255, 255, 0.80);
   color: rgba(100, 100, 100, 1);
   background-color: white;
   border: 1px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  border-radius: 8px;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
 }
 .switcher-list .item-box {
   padding: 6px;
-  border-radius: 3px;
+  border-radius: 8px;
   border: 1px rgba(100, 100, 100, 0.0);
 }
 .switcher-list .item-box:outlined {
@@ -1538,7 +1465,7 @@ background-color: rgba(255, 255, 255, 0.80);
 .workspace-switcher-container{
   background-color: white;
   border: 1px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  border-radius: 8px;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
 }
 .workspace-switcher {
@@ -1552,7 +1479,7 @@ background-color: rgba(255, 255, 255, 0.80);
   height: 50px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background: transparent;
-  border-radius: 3px; 
+  border-radius: 8px; 
   }
 .ws-switcher-active-up{
   height: 50px;
@@ -1560,7 +1487,7 @@ background-color: rgba(255, 255, 255, 0.80);
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid rgba(100, 100, 100, 0.5);
   background-size: 50px;   
-  border-radius: 3px;
+  border-radius: 8px;
 }
 .ws-switcher-active-down {
   height: 50px;
@@ -1568,7 +1495,7 @@ background-color: rgba(255, 255, 255, 0.80);
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid rgba(100, 100, 100, 0.5);
   background-size: 50px; 
-  border-radius: 3px; 
+  border-radius: 8px; 
 }
 .ws-switcher-active-left,
 .ws-switcher-active-right {
@@ -1987,7 +1914,7 @@ background-color: rgba(255, 255, 255, 0.80);
 .app-well-app-running-dot {
   height: 6px;
   width: 6px;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #00b0ff;
   margin-bottom: 1px; 
 }

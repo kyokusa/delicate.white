@@ -204,12 +204,12 @@ notebook > header > tabs > arrow,
     min-width: 16px;
     padding: 4px 8px;
     border: none;
-    border-radius: 3px;
+    border-radius: 8px;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     font-weight: bold;
     color: #646464;
     outline-color: rgba(20, 20, 20, 0.3);
-    background-color: rgba(255, 255, 255, 0.999);
+    background-color: rgba(255, 255, 255, 0.10);
     text-shadow: none;
     box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px 0px rgba(100, 100, 100, 0.2); }
 notebook > header > tabs > arrow:backdrop,  
@@ -218,12 +218,12 @@ notebook > header > tabs > arrow:backdrop,
     min-width: 16px;
     padding: 4px 8px;
     border: none;
-    border-radius: 3px;
+    border-radius: 8px;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     font-weight: bold;
     color: #646464;
     outline-color: rgba(20, 20, 20, 0.3);
-    background-color: rgba(255, 255, 255, 0.999);
+    background-color: rgba(255, 255, 255, 0.10);
     text-shadow: none;
     box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px 0px rgba(100, 100, 100, 0.2); }
   notebook > header > tabs > arrow,
@@ -1692,7 +1692,7 @@ GraniteWidgetsWelcome {
  ***************/
  .titlebar,
  .headerbar {  
-  min-height: 32px;
+  min-height: 36px;
   background-color: alpha(#ffffff, 0.80);
   color: #646464;
   border-radius: 0; }
@@ -1703,11 +1703,13 @@ GraniteWidgetsWelcome {
     transition: 200ms ease-out; }  
   .titlebar .title,
   headerbar .title {
+    color: alpha(#00b0ff, 0.90);
     font-weight: bold;
     padding-left: 8px;
     padding-right: 8px; }
   .titlebar .subtitle,
   headerbar .subtitle {
+    color: alpha(#ff5800, 0.90);
     font-size: smaller;
     padding-left: 8px;
     padding-right: 8px; }
@@ -1765,7 +1767,7 @@ GraniteWidgetsWelcome {
     border-radius: 0;
     text-shadow: none;
     box-shadow: none;
-    min-height: 32px; }
+    min-height: 36px; }
     .titlebar button:hover, .titlebar button:active, .titlebar button:checked,
     headerbar button:hover,
     headerbar button:active,
@@ -1777,12 +1779,12 @@ GraniteWidgetsWelcome {
     headerbar button:backdrop,
     headerbar button:disabled,
     headerbar button:backdrop:disabled {
-      color: rgba(100, 100, 100, 0.2);
+      color: alpha(#646464, 0.70);
       background-color: transparent;
       border-radius: 0;
       text-shadow: none;
       box-shadow: none; 
-      min-height: 32px; }
+      min-height: 36px; }
     .titlebar button:backdrop:hover, .titlebar button:backdrop:active, .titlebar button:backdrop:checked,
     headerbar button:backdrop:hover,
     headerbar button:backdrop:active,
@@ -1793,7 +1795,7 @@ GraniteWidgetsWelcome {
     .titlebar button.suggested-action,
     headerbar button.suggested-action {
       font-weight: bold;
-      min-height: 32px;
+      min-height: 36px;
       margin-top: 4px;
       margin-bottom: 4px;
       border-radius: 3px;
@@ -1845,7 +1847,7 @@ GraniteWidgetsWelcome {
     .titlebar button.destructive-action,
     headerbar button.destructive-action {
       font-weight: bold;
-      min-height: 32px;
+      min-height: 36px;
       margin-top: 4px;
       margin-bottom: 4px;
       border-radius: 3px;
@@ -2912,492 +2914,121 @@ progressbar {
 /************
  * GtkScale *
  ************/
-progressbar trough, scale trough, scale fill {
-  background-color: rgba(100, 100, 100, 0.14);
-  border: none;
-  border-radius: 3px;
-  margin: 0; }
-  progressbar trough:disabled, scale trough:disabled, scale fill:disabled {
-    background-color: rgba(100, 100, 100, 0.06); }
-  progressbar trough:backdrop, progressbar:backdrop trough, scale trough:backdrop, scale fill:backdrop {
-    background-color: rgba(100, 100, 100, 0.06);
-    transition: 200ms ease-out; }
-    progressbar trough:backdrop:disabled, progressbar:backdrop trough:disabled, scale trough:backdrop:disabled, scale fill:backdrop:disabled {
-      background-color: rgba(100, 100, 100, 0.06); }
-
-progressbar progress, scale highlight {
-  border: none;
-  background-color: #00b0ff;
-  border-radius: 3px;
-  margin: 0; }
-  progressbar progress:disabled, scale highlight:disabled {
-    border: none;
-    background-color: rgba(100, 100, 100, 0.14); }
-  progressbar progress:backdrop, progressbar:backdrop progress, scale highlight:backdrop, progressbar progress:active:backdrop, progressbar:backdrop progress:active, scale highlight:active:backdrop {
-    border-color: #3ec3ff;
-    background-color: alpha(#d5d5d5, 0.30); }
-    progressbar progress:backdrop:disabled, progressbar:backdrop progress:disabled, scale highlight:backdrop:disabled, progressbar progress:active:backdrop:disabled, progressbar:backdrop progress:active:disabled, scale highlight:active:backdrop:disabled {
-      background-color: rgba(100, 100, 100, 0.1); }
-
 scale {
-  min-height: 16px;
-  min-width: 16px;
-  padding: 8px; }
-  scale.horizontal trough,
-  scale.horizontal progress {
-    min-height: 6px; }
-  scale.vertical trough,
-  scale.vertical progress {
-    min-width: 6px; }
-  scale slider {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1);
-    border-radius: 8px;
-    transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition-property: background, border, box-shadow; }
-    scale slider:active {
-      background-color: alpha(#d5d5d5, 0.30); }
-      scale slider:active:disabled {
-        background-color: alpha(#ffffff, 0.90);
-        box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.05); }
-  scale.fine-tune.horizontal {
-    padding-top: 9px;
-    padding-bottom: 9px;
-    min-height: 16px; }
-  scale.fine-tune.vertical {
-    padding-left: 9px;
-    padding-right: 9px;
-    min-width: 16px; }
-  scale.fine-tune slider {
-    margin: -6px; }
-  scale.fine-tune fill,
-  scale.fine-tune highlight,
-  scale.fine-tune trough {
-    border-radius: 5px;
-    -gtk-outline-radius: 7px; }
-  scale trough {
-    outline-offset: 2px;
-    -gtk-outline-radius: 5px;
-    outline-color: transparent; }
-  scale fill:backdrop, scale fill {
-    background-color: rgba(100, 100, 100, 0.2); }
-  scale fill:disabled:backdrop, scale fill:disabled {
-    border-color: transparent;
-    background-color: transparent; }
-  .osd scale fill {
-    background-color: rgba(97, 97, 97, 0.775); }
-    .osd scale fill:disabled:backdrop, .osd scale fill:disabled {
-      border-color: transparent;
-      background-color: transparent; }
-  scale slider {
-    border-color: #f8f8f8;
-    border: none;
-    border-radius: 8px;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-    scale slider:active {
-      border-color: #00b0ff; }
-    scale slider:disabled {
-      background-color: alpha(#ffffff, 0.90);
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-    scale slider:backdrop, scale slider:backdrop:disabled {
-      transition: 200ms ease-out;
-      background-color: alpha(#ffffff, 0.90);
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-    row:selected scale slider:disabled, row:selected scale slider {
-      border-color: #00b0ff; }
-    .osd scale slider {
-      color: #646464;
-      border-color: rgba(100, 100, 100, 0.7);
-      background-color: rgba(255, 255, 255, 0.8);
-      background-clip: padding-box;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-      text-shadow: 0 1px black;
-      -gtk-icon-shadow: 0 1px black;
-      outline-color: rgba(254, 254, 254, 0.3);
-      border-color: rgba(100, 100, 100, 0.7);
-      background-color: #14171a; }
-      .osd scale slider:hover {
-        color: #646464;
-        border-color: rgba(100, 100, 100, 0.7);
-        background-image: linear-gradient(to bottom, rgba(47, 54, 61, 0.8), rgba(47, 54, 61, 0.8));
-        background-clip: padding-box;
-        box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-        text-shadow: 0 1px black;
-        -gtk-icon-shadow: 0 1px black;
-        outline-color: rgba(254, 254, 254, 0.3);
-        background-color: #14171a; }
-      .osd scale slider:active {
-        color: #646464;
-        border-color: rgba(100, 100, 100, 0.7);
-        background-image: linear-gradient(to bottom, rgba(33, 38, 43, 0.8), rgba(33, 38, 43, 0.8));
-        background-clip: padding-box;
-        box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-        text-shadow: none;
-        -gtk-icon-shadow: none;
-        outline-color: rgba(254, 254, 254, 0.3);
-        background-color: #14171a; }
-      .osd scale slider:disabled {
-        color: #898b8c;
-        border-color: rgba(100, 100, 100, 0.7);
-        background-image: linear-gradient(to bottom, rgba(43, 46, 49, 0.5), rgba(43, 46, 49, 0.5));
-        background-clip: padding-box;
-        box-shadow: none;
-        text-shadow: none;
-        -gtk-icon-shadow: none;
-        background-color: #14171a; }
-      .osd scale slider:backdrop {
-        color: #646464;
-        border-color: rgba(100, 100, 100, 0.7);
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
-        background-clip: padding-box;
-        box-shadow: none;
-        text-shadow: none;
-        -gtk-icon-shadow: none;
-        background-color: #14171a; }
-        .osd scale slider:backdrop:disabled {
-          background-color: #14171a; }
-  scale value {
-    color: alpha(currentColor,0.4); }
-  scale marks {
-    color: alpha(currentColor,0.4); }
-    scale marks.top {
-      margin-bottom: 6px;
-      margin-top: -8px; }
-    scale marks.bottom {
-      margin-top: 6px;
-      margin-bottom: -8px; }
-    scale marks.top {
-      margin-right: 6px;
-      margin-left: -8px; }
-    scale marks.bottom {
-      margin-left: 6px;
-      margin-right: -8px; }
-  scale.fine-tune marks.top {
-    margin-bottom: 6px;
-    margin-top: -9px; }
-  scale.fine-tune marks.bottom {
-    margin-top: 6px;
-    margin-bottom: -9px; }
-  scale.fine-tune marks.top {
-    margin-right: 6px;
-    margin-left: -9px; }
-  scale.fine-tune marks.bottom {
-    margin-left: 6px;
-    margin-right: -9px; }
-  scale.horizontal indicator {
-    min-height: 6px;
-    min-width: 1px; }
-  scale.horizontal.fine-tune indicator {
-    min-height: 3px; }
-  scale.vertical indicator {
-    min-height: 1px;
-    min-width: 6px; }
-  scale.vertical.fine-tune indicator {
-    min-width: 3px; }
-  scale.horizontal.marks-before:not(.marks-after) slider {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px; }
-  scale.horizontal.marks-before:not(.marks-after) slider:hover {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px; }
-  scale.horizontal.marks-before:not(.marks-after) slider:active {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px; }
-  scale.horizontal.marks-before:not(.marks-after) slider:disabled {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px; }
-  scale.horizontal.marks-before:not(.marks-after) slider:backdrop {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px; }
-  scale.horizontal.marks-before:not(.marks-after) slider:backdrop:disabled {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px; }
-  scale.horizontal.marks-after:not(.marks-before) slider {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px; }
-  scale.horizontal.marks-after:not(.marks-before) slider:hover {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px; }
-  scale.horizontal.marks-after:not(.marks-before) slider:active {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px; }
-  scale.horizontal.marks-after:not(.marks-before) slider:disabled {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px; }
-  scale.horizontal.marks-after:not(.marks-before) slider:backdrop {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px; }
-  scale.horizontal.marks-after:not(.marks-before) slider:backdrop:disabled {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px; }
-  scale.vertical.marks-before:not(.marks-after) slider {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px; }
-  scale.vertical.marks-before:not(.marks-after) slider:hover {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px; }
-  scale.vertical.marks-before:not(.marks-after) slider:active {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px; }
-  scale.vertical.marks-before:not(.marks-after) slider:disabled {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px; }
-  scale.vertical.marks-before:not(.marks-after) slider:backdrop {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px; }
-  scale.vertical.marks-before:not(.marks-after) slider:backdrop:disabled {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.vertical.marks-before:not(.marks-after).fine-tune slider {
-    margin: -7px; }
-  scale.vertical.marks-after:not(.marks-before) slider {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px; }
-  scale.vertical.marks-after:not(.marks-before) slider:hover {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px; }
-  scale.vertical.marks-after:not(.marks-before) slider:active {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px; }
-  scale.vertical.marks-after:not(.marks-before) slider:disabled {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px; }
-  scale.vertical.marks-after:not(.marks-before) slider:backdrop {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px; }
-  scale.vertical.marks-after:not(.marks-before) slider:backdrop:disabled {
-    min-height: 16px;
-    min-width: 16px;
-    margin: -7px;
-    border: none;
-    border-radius: 50%;
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0px 0px 1px 1px rgba(100, 100, 100, 0.1); }
-  scale.vertical.marks-after:not(.marks-before).fine-tune slider {
-    margin: -7px; }
-  scale.color {
-    min-height: 0;
-    min-width: 0; }
-    scale.color trough {
-      background-image: image(rgba(100, 100, 100, 0.2));
-      background-repeat: no-repeat; }
-    scale.color.horizontal {
-      padding: 0 0 15px 0; }
-      scale.color.horizontal trough {
-        padding-bottom: 4px;
-        background-position: 0 -3px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0; }
-      scale.color.horizontal slider:dir(ltr):hover, scale.color.horizontal slider:dir(ltr):backdrop, scale.color.horizontal slider:dir(ltr):disabled, scale.color.horizontal slider:dir(ltr):backdrop:disabled, scale.color.horizontal slider:dir(ltr), scale.color.horizontal slider:dir(rtl):hover, scale.color.horizontal slider:dir(rtl):backdrop, scale.color.horizontal slider:dir(rtl):disabled, scale.color.horizontal slider:dir(rtl):backdrop:disabled, scale.color.horizontal slider:dir(rtl) {
-        margin-bottom: -15px;
-        margin-top: 6px; }
-    scale.color.vertical:dir(ltr) {
-      padding: 0 0 0 15px; }
-      scale.color.vertical:dir(ltr) trough {
-        padding-left: 4px;
-        background-position: 3px 0;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0; }
-      scale.color.vertical:dir(ltr) slider:hover, scale.color.vertical:dir(ltr) slider:backdrop, scale.color.vertical:dir(ltr) slider:disabled, scale.color.vertical:dir(ltr) slider:backdrop:disabled, scale.color.vertical:dir(ltr) slider {
-        margin-left: -15px;
-        margin-right: 6px; }
-    scale.color.vertical:dir(rtl) {
-      padding: 0 15px 0 0; }
-      scale.color.vertical:dir(rtl) trough {
-        padding-right: 4px;
-        background-position: -3px 0;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0; }
-      scale.color.vertical:dir(rtl) slider:hover, scale.color.vertical:dir(rtl) slider:backdrop, scale.color.vertical:dir(rtl) slider:disabled, scale.color.vertical:dir(rtl) slider:backdrop:disabled, scale.color.vertical:dir(rtl) slider {
-        margin-right: -15px;
-        margin-left: 6px; }
-    scale.color.fine-tune.horizontal:dir(ltr), scale.color.fine-tune.horizontal:dir(rtl) {
-      padding: 0 0 8px 0; }
-      scale.color.fine-tune.horizontal:dir(ltr) trough, scale.color.fine-tune.horizontal:dir(rtl) trough {
-        padding-bottom: 7px;
-        background-position: 0 -6px; }
-      scale.color.fine-tune.horizontal:dir(ltr) slider, scale.color.fine-tune.horizontal:dir(rtl) slider {
-        margin-bottom: -15px;
-        margin-top: 6px; }
-    scale.color.fine-tune.vertical:dir(ltr) {
-      padding: 0 0 0 8px; }
-      scale.color.fine-tune.vertical:dir(ltr) trough {
-        padding-left: 7px;
-        background-position: 6px 0; }
-      scale.color.fine-tune.vertical:dir(ltr) slider {
-        margin-left: -15px;
-        margin-right: 6px; }
-    scale.color.fine-tune.vertical:dir(rtl) {
-      padding: 0 8px 0 0; }
-      scale.color.fine-tune.vertical:dir(rtl) trough {
-        padding-right: 7px;
-        background-position: -6px 0; }
-      scale.color.fine-tune.vertical:dir(rtl) slider {
-        margin-right: -15px;
-        margin-left: 6px; }
+  min-height: 2px;
+  min-width: 2px; }
+scale.horizontal {
+  padding: 17px 12px; }
+scale.vertical {
+  padding: 12px 17px; }
+scale slider {
+  min-height: 32px;
+  min-width: 32px;
+  margin: -15px; }
+scale.fine-tune.horizontal {
+  min-height: 4px;
+  padding-top: 16px;
+  padding-bottom: 16px; }
+scale.fine-tune.vertical {
+  min-width: 4px;
+  padding-left: 16px;
+  padding-right: 16px; }
+scale.fine-tune slider {
+  margin: -14px; }
+scale trough {
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.3); }
+scale trough:disabled {
+  background-color: rgba(0, 0, 0, 0.12); }
+scale highlight {
+  transition: background-image 75ms cubic-bezier(0, 0, 0.2, 1);
+  background-image: image(#00b0ff); }
+scale highlight:disabled {
+  background-color: #f5f5f5;
+  background-image: image(rgba(0, 0, 0, 0.3)); }
+scale fill {
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
+  background-color: rgba(0, 0, 0, 0.3); }
+scale fill:disabled {
+  background-color: transparent; }
+scale slider {
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto, 1000% 1000%;
+  border-radius: 50%;
+  color: #00b0ff; }
+scale slider {
+  background-image: -gtk-scaled(url("assets/scale-slider.png"), url("assets/scale-slider.png")), radial-gradient(circle, transparent 10%, transparent 0%); }
+scale slider:disabled {
+  background-image: -gtk-scaled(url("assets/scale-slider.png"), url("assets/scale-slider.png")), radial-gradient(circle, transparent 10%, transparent 0%); }
+scale slider:focus {
+  background-color: alpha(#00b0ff 0.08); }
+scale slider:hover {
+  background-color: alpha(#00b0ff, 0.08); }
+scale slider:focus:hover {
+  background-color: alpha(#00b0ff, 0.16); }
+scale slider:active {
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  animation: ripple-on-slider 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  background-color: alpha(#00b0ff, 0.08);
+  background-image: -gtk-scaled(url("assets/scale-slider.png"), url("assets/scale-slider.png")), radial-gradient(circle, alpha(#00b0ff, 0.12) 10%, transparent 0%);
+  background-size: auto, 0% 0%; }
+scale marks,
+scale value {
+  color: rgba(0, 0, 0, 0.7); }
+scale indicator {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: transparent; }
+scale.horizontal marks.top {
+  margin-bottom: 7px;
+  margin-top: -15px; }
+scale.horizontal.fine-tune marks.top {
+  margin-bottom: 6px;
+  margin-top: -14px; }
+scale.horizontal marks.bottom {
+  margin-top: 7px;
+  margin-bottom: -15px; }
+scale.horizontal.fine-tune marks.bottom {
+  margin-top: 6px;
+  margin-bottom: -14px; }
+scale.vertical marks.top {
+  margin-right: 7px;
+  margin-left: -15px; }
+scale.vertical.fine-tune marks.top {
+  margin-right: 6px;
+  margin-left: -14px; }
+scale.vertical marks.bottom {
+  margin-left: 7px;
+  margin-right: -15px; }
+scale.vertical.fine-tune marks.bottom {
+  margin-left: 6px;
+  margin-right: -14px; }
+scale.horizontal indicator {
+  min-height: 8px;
+  min-width: 1px; }
+scale.vertical indicator {
+  min-height: 1px;
+  min-width: 8px; }
+scale.color {
+  min-height: 0;
+  min-width: 0; }
+scale.color.horizontal {
+  padding: 0 0 12px 0; }
+scale.color.horizontal slider:dir(ltr), scale.color.horizontal slider:dir(rtl) {
+  margin-bottom: -24px;
+  margin-top: 8px; }
+scale.color.vertical:dir(ltr) {
+  padding: 0 0 0 12px; }
+scale.color.vertical:dir(ltr) slider {
+  margin-left: -24px;
+  margin-right: 8px; }
+scale.color.vertical:dir(rtl) {
+  padding: 0 12px 0 0; }
+scale.color.vertical:dir(rtl) slider {
+  margin-right: -24px;
+  margin-left: 8px; }
 
 /**************
  * Scrollbars *
@@ -3844,60 +3475,39 @@ spinner {
  * Switch *
  **********/
 switch {
-  font-size: 1px;
-  font-weight: bold;
-  outline-offset: -4px;
-  transition: all 200ms ease-in;
-  border: none;
-  border-radius: 14px;
-  color: transparent;
-  padding: 2px;
-  background-color: rgba(100, 100, 100, 0.1);
-  box-shadow: inset 0 0 0 1px rgba(100, 100, 100, 0.05), 0px 1px rgba(100, 100, 100, 0.2); }
-  switch:disabled {
-    background-color: alpha(#ffffff, 0.90); }
-  switch:backdrop {
-    background-color: alpha(#d5d5d5, 0.30);
-    transition: 200ms ease-out; }
-    switch:backdrop:disabled {
-      background-color: alpha(#ffffff, 0.90); }
-  switch:active, switch:checked {
-    background-color: alpha(#00b0ff, 0.90); }
-    switch:active:backdrop, switch:checked:backdrop {
-      background-color: alpha(#d5d5d5, 0.30); }
-  switch slider {
-    padding: 2px;
-    min-width: 16px;
-    min-height: 16px;
-    border-radius: 100%;
-    transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    background-color: alpha(#ffffff, 0.90);
-    box-shadow: 0 2px 2px rgba(100, 100, 100, 0.2), 0 1px 2px rgba(100, 100, 100, 0.2); }
-    switch slider:backdrop {
-      padding: 2px;
-      box-shadow: none;
-      background-color: alpha(#ffffff, 0.90); }
-  switch:checked slider {
-    background: #f8f8f8; }
-    switch:checked slider:backdrop {
-      box-shadow: none;
-      background-color: rgba(248, 248, 248, 0.9);
-      border: none; }
-  row:selected switch {
-    box-shadow: none;
-    border-color: #00b0ff; }
-    row:selected switch:backdrop {
-      border-color: #00b0ff; }
-    row:selected switch.slider:dir(rtl) {
-      border-left-color: rgba(100, 100, 100, 0.2); }
-    row:selected switch.slider:dir(ltr) {
-      border-right-color: rgba(100, 100, 100, 0.2); }
-    row:selected switch.slider:checked, row:selected switch.slider {
-      border-color: #00b0ff; }
-  switch trough:active, switch trough:checked {
-    background-color: alpha(#d5d5d5, 0.30); }
-    switch trough:active:backdrop, switch trough:checked:backdrop {
-      background-color: rgba(98, 206, 255, 0.6); }
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  margin: 6px 0;
+  padding: 0 2px;  
+  border: 13px solid transparent;
+  border-radius: 9999px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-clip: padding-box;
+  font-size: 0; }
+switch:checked {
+  background-color: rgba(0, 176, 255, 0.5); }
+switch:disabled {
+  opacity: 0.5; }
+switch image {
+  margin: -7px 0 -7px 0;
+  -gtk-icon-transform: scale(0); }  
+switch slider {
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  min-width: 8px;
+  min-height: 8px;
+  margin: -8px -1px;
+  border-radius: 9999px;
+  outline: none;
+  box-shadow: 0 0 0 10px transparent, 0 2px 2px -2px rgba(255, 255, 255, 0.3), 0 1px 2px -1px rgba(255, 255, 255, 0.24), 0 1px 2px -0.6px rgba(255, 255, 255, 0.17);
+  background-color: #afafaf; }
+switch:focus slider {
+  box-shadow: 0 0 0 10px rgba(0, 176, 255, 0.08), 0 2px 2px -2px rgba(255, 255, 255, 0.3), 0 1px 2px -1px rgba(255, 255, 255, 0.24), 0 1px 2px -0.6px rgba(255, 255, 255, 0.17); }
+switch:hover slider {
+  box-shadow: 0 0 0 10px rgba(0, 176, 255, 0.08), 0 2px 2px -2px rgba(255, 255, 255, 0.3), 0 1px 2px -1px rgba(255, 255, 255, 0.24), 0 1px 2px -0.6px rgba(255, 255, 255, 0.17); }
+switch:focus:hover slider {
+  box-shadow: 0 0 0 10px rgba(0, 176, 255, 0.16), 0 2px 2px -2px rgba(255, 255, 255, 0.3), 0 1px 2px -1px rgba(255, 255, 255, 0.24), 0 1px 2px -0.6px rgba(255, 255, 255, 0.17); }
+switch:checked slider {
+  background-color: rgba(0, 176, 255, 1);
+  color: rgba(0, 176, 255, 1); }
 
 /************
  * Toolbars *
@@ -3944,8 +3554,8 @@ searchbar,
     box-shadow: none;
     transition: 200ms ease-out; }
 
-searchbar {
-  background: #f8f8f8; }
+searchbar, searchbar:backdrop {
+  background: alpha(#ffffff, 0.20); }
 
 /************
  * Tooltips *
@@ -5024,11 +4634,10 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
 /*********
  * Gedit *
  *********/
-.gedit-search-slider {
-     padding: 4px;
-     border-radius: 0 0 3px 3px;
+.gedit-search-slider { 
+     border-radius: 9999px;    
      border: 0;
-     background-color: alpha(#ffffff, 0.85); }  
+     background-color: alpha(#ffffff, 0.75); }  
   
 /********
  * Gala *
