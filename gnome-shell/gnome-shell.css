@@ -40,6 +40,7 @@ stage{
 
 /* entries */
 StEntry {
+  min-width: 18px;
   min-height: 36px;
   padding: 0 8px;
   border-radius: 0;
