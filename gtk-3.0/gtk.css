@@ -424,7 +424,7 @@ button.text-button.image-button image:not(:only-child) {
 }
 
 button.suggested-action {
-  background-color: #1A73E8;
+  background-color: #00b0ff;
   color: white;
   box-shadow: none;
 }
@@ -453,7 +453,7 @@ button.suggested-action:focus {
 
 button.suggested-action.flat {
   background-color: transparent;
-  color: #1A73E8;
+  color: #00b0ff;
 }
 
 button.suggested-action.flat:disabled {
@@ -2546,136 +2546,109 @@ assistant {
  * Notebooks *
  *************/
 frame > paned > notebook > header, notebook.frame > header {
-  background-color: alpha(#ffffff, 0.30);
-}
+  background-color: alpha(#ffffff, 0.30); }
 
 notebook, notebook.frame {
   background-color: alpha(#ffffff, 0.30);
-  border-radius: 2px;
-}
+  border-radius: 2px; }
 
 notebook:focus tab:checked {
-  box-shadow: none;
-}
+  box-shadow: none; }
 
 notebook > header {
   border-width: 0.01px; /* !important */
   border-color: rgba(100, 100, 100, 0.08);
   background-color: transparent;
-  background-clip: border-box;
-}
+  background-clip: border-box; }
 
 notebook > header.top {
   border-bottom-style: solid;
-  border-radius: 0 0 0 0;
-}
+  border-radius: 0 0 0 0; }
 
 notebook > header.top > tabs {
   margin-bottom: -1px;
-  margin-top: 4px;
-}
+  margin-top: 4px; }
 
 notebook > header.top > tabs > tab {
   border-radius: 8px 8px 0 0;
-  border-bottom: none;
-}
+  border-bottom: none; }
 
 notebook > header.bottom {
   border-top-style: solid;
-  border-radius: 0 0 8px 8px;
-}
+  border-radius: 0 0 8px 8px; }
 
 notebook > header.bottom > tabs {
   margin-top: -1px;
-  margin-bottom: 4px;
-}
+  margin-bottom: 4px; }
 
 notebook > header.bottom > tabs > tab {
   border-radius: 0 0 8px 8px;
-  border-top: none;
-}
+  border-top: none; }
 
 notebook > header.left {
   border-right-style: solid;
-  border-radius: 8px 0 0 8px;
-}
+  border-radius: 8px 0 0 8px; }
 
 notebook > header.left > tabs {
   margin-left: 4px;
-  margin-right: -1px;
-}
+  margin-right: -1px; }
 
 notebook > header.left > tabs > tab {
   border-radius: 8px 0 0 8px;
-  border-right: none;
-}
+  border-right: none; }
 
 notebook > header.right {
   border-left-style: solid;
-  border-radius: 0 8px 8px 0;
-}
+  border-radius: 0 8px 8px 0; }
 
 notebook > header.right > tabs {
   margin-left: -1px;
-  margin-right: 4px;
-}
+  margin-right: 4px; }
 
 notebook > header.right > tabs > tab {
   border-radius: 0 8px 8px 0;
-  border-left: none;
-}
+  border-left: none; }
 
 notebook > header.top > tabs > arrow {
-  border-top-style: none;
-}
+  border-top-style: none; }
 
 notebook > header.bottom > tabs > arrow {
-  border-bottom-style: none;
-}
+  border-bottom-style: none; }
 
 notebook > header.top > tabs > arrow, notebook > header.bottom > tabs > arrow {
   padding-left: 4px;
-  padding-right: 4px;
-}
+  padding-right: 4px; }
 
 notebook > header.top > tabs > arrow.down, notebook > header.bottom > tabs > arrow.down {
   margin-left: -8px;
-  -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
-}
+  -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
 
 notebook > header.top > tabs > arrow.up, notebook > header.bottom > tabs > arrow.up {
   margin-right: -8px;
-  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
-}
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 
 notebook > header.left > tabs > arrow {
-  border-left-style: none;
-}
+  border-left-style: none; }
 
 notebook > header.right > tabs > arrow {
-  border-right-style: none;
-}
+  border-right-style: none; }
 
 notebook > header.left > tabs > arrow, notebook > header.right > tabs > arrow {
   padding-top: 4px;
-  padding-bottom: 4px;
-}
+  padding-bottom: 4px; }
 
 notebook > header.left > tabs > arrow.down, notebook > header.right > tabs > arrow.down {
   margin-top: -8px;
-  -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
-}
+  -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
 
 notebook > header.left > tabs > arrow.up, notebook > header.right > tabs > arrow.up {
   margin-bottom: -8px;
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
-}
+  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
 notebook > header > tabs > arrow {
   min-height: 16px;
   min-width: 16px;
-  border-radius: 0;
-}
+  border-radius: 0; }
 
 notebook > header tab {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
@@ -2688,93 +2661,74 @@ notebook > header tab {
   outline: none;
   background-clip: padding-box;
   color: rgba(100, 100, 100, 0.6);
-  font-weight: 500;
-}
+  font-weight: 500; }
 
 notebook > header tab:hover {
   background-color: alpha(#dcdcdc, 0.40);
-  color: #00b0ff;
-}
+  color: #00b0ff; }
 
 notebook > header tab:disabled {
-  color: rgba(100, 100, 100, 0.26);
-}
+  color: rgba(100, 100, 100, 0.26); }
 
 notebook > header tab:checked {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
   background-color: #ffffff;
   background-clip: padding-box;
   border-color: rgba(100, 100, 100, 0.08);
-  color: #00b0ff;
-}
+  color: #00b0ff; }
 
 notebook > header tab:checked:disabled {
-  color: rgba(100, 100, 100, 0.38);
-}
+  color: rgba(100, 100, 100, 0.38); }
 
 notebook > header tab.reorderable-page:checked {
-  background-color: alpha(#ffffff, 0.30);
-}
+  background-color: alpha(#ffffff, 0.30); }
 
 notebook > header tab > box {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
   margin: -6px -8px;
-  padding: 6px 8px;
-}
+  padding: 6px 8px; }
 
 notebook > header tab > box:drop(active) {
   background-color: rgba(100, 100, 100, 0.08);
-  color: rgba(100, 100, 100, 0.87);
-}
+  color: rgba(100, 100, 100, 0.87); }
 
 notebook > header tab button.flat:last-child {
   margin-left: 6px;
-  margin-right: -6px;
-}
+  margin-right: -6px; }
 
 notebook > header tab button.flat:first-child {
   margin-left: -6px;
-  margin-right: 6px;
-}
+  margin-right: 6px; }
 
 notebook > header.top tabs, notebook > header.bottom tabs {
   padding-left: 8px;
-  padding-right: 8px;
-}
+  padding-right: 8px; }
 
 notebook > header.top tabs:not(:only-child):first-child, notebook > header.bottom tabs:not(:only-child):first-child {
-  margin-left: 0;
-}
+  margin-left: 0; }
 
 notebook > header.top tabs:not(:only-child):last-child, notebook > header.bottom tabs:not(:only-child):last-child {
-  margin-right: 0;
-}
+  margin-right: 0; }
 
 notebook > header.top tabs tab.reorderable-page, notebook > header.bottom tabs tab.reorderable-page {
-  border-style: solid;
-}
+  border-style: solid; }
 
 notebook > header.left tabs, notebook > header.right tabs {
   padding-top: 8px;
-  padding-bottom: 8px;
-}
+  padding-bottom: 8px; }
 
 notebook > header.left tabs:not(:only-child):first-child, notebook > header.right tabs:not(:only-child):first-child {
-  margin-top: 0;
-}
+  margin-top: 0; }
 
 notebook > header.left tabs:not(:only-child):last-child, notebook > header.right tabs:not(:only-child):last-child {
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
 
 notebook > header.left tabs tab.reorderable-page, notebook > header.right tabs tab.reorderable-page {
-  border-style: solid;
-}
+  border-style: solid; }
 
 notebook > stack:not(:only-child) {
   background-color: transparent;
-  border-radius: 0;
-}
+  border-radius: 0; }
 
 /*********
  * Paned *
@@ -2883,33 +2837,28 @@ popover.background {
  * Progress bars *
  *****************/
 progressbar {
-  font-size: smaller;
-  color: rgba(255, 255, 255, 0.4); }
-  progressbar.horizontal trough,
-  progressbar.horizontal progress {
-    min-height: 6px; }
-  progressbar.vertical trough,
-  progressbar.vertical progress {
-    min-width: 6px; }
-  progressbar.horizontal progress {
-    margin: 0; }
-  progressbar.vertical progress {
-    margin: 0; }
-  progressbar:backdrop {
-    box-shadow: none;
-    transition: 200ms ease-out; }
-  progressbar.osd {
-    min-width: 3px;
-    min-height: 3px;
-    background-color: transparent; }
-    progressbar.osd trough {
-      border-style: none;
-      border-radius: 0;
-      background-color: transparent;
-      box-shadow: none; }
-    progressbar.osd progress {
-      border-style: none;
-      border-radius: 0; }
+  padding-bottom: 3px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: smaller; }
+
+progressbar.horizontal trough,
+progressbar.horizontal progress {
+  min-height: 6px; }
+
+progressbar.vertical trough,
+progressbar.vertical progress {
+  min-width: 6px; }
+
+progressbar trough {  
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.11); }
+
+progressbar progress {
+  border-radius: 12px;
+  background-color: #00b0ff; }
+
+progressbar trough.empty progress {
+  all: unset; }
 
 /************
  * GtkScale *
