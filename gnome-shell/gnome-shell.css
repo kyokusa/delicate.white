@@ -560,20 +560,20 @@ StScrollBar StButton#hhandle:active{
 
 /* top panel */
 #panel {
-  background-color: rgba(0, 0, 0, 0.85);  
+  background-color: rgba(255, 255, 255, 0.75);  
   transition-duration: 250ms;
   font-weight: bold;
   height: 28px;
 }
 #panel:overview, #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: rgba(255, 255, 255, 0.01);
 }
 #panel #panelLeft, #panel #panelCenter {
   spacing: 0;
 }
 #panel .panel-corner {
   -panel-corner-radius: 0;
-  -panel-corner-background-color: rgba(0, 0, 0, 0.85);
+  -panel-corner-background-color: rgba(255, 255, 255, 0.75);
   -panel-corner-border-width: 2px;
   -panel-corner-border-color: transparent;
 }
