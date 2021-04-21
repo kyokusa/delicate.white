@@ -4570,10 +4570,10 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
 /************
  * Nautilus *
  ************/ 
-/*.nautilus-window headerbar {
+.nautilus-window headerbar {
   padding: 0 6px;
   min-height: 32px;
-  background-color: alpha(#ffffff, 1);
+  background-color: alpha(#ffffff, 0.30);
   color: #646464; }*/ 
 .nautilus-window.csd.background, .nautilus-window placessidebar list, .nautilus-window notebook > stack, .nautilus-window.csd.background:backdrop, .nautilus-window placessidebar list:backdrop, .nautilus-window notebook > stack:backdrop {
   background-color: alpha(#ffffff, 0.48); }
