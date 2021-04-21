@@ -2076,11 +2076,12 @@ StScrollBar StButton#hhandle:active{
 .dash-label {
   border-radius: 3px;
   padding: 4px 12px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
+  color: #646464;
+  background-color: rgba(255, 255, 255, 0.7);
   border: 0;
   text-align: center;
   -y-offset: 3px;
+  margin: 5px;
   box-shadow: none; } 
 
 #dash .app-well-app .overview-icon {
