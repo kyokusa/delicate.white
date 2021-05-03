@@ -17,3 +17,8 @@ Extract the file to the themes directory `/home/USERNAME/.themes`
 ### Platform
 
 _Gnome 40
+
+### Note
+
+_Compatible with blur-me gnome shell extensions
+
